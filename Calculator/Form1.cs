@@ -12,8 +12,8 @@ namespace Calculator
 {
     public partial class Calculator : Form
     {
-        public int a { get; set; }
-        public int b { get; set; }
+        public float a { get; set; }
+        public float b { get; set; }
 
         public Calculator()
         {
@@ -34,15 +34,17 @@ namespace Calculator
             txtBox.Text = txtBox.Text + button.Text;
         }
 
+
         private void btnSum_Click(object sender, EventArgs e)
         {
-            a = int.Parse(txtBox.Text);
+            a = float.Parse(txtBox.Text);
             txtBox.Clear();
         }
 
+
         private void btnEqual_Click(object sender, EventArgs e)
         {
-            b = int.Parse(txtBox.Text);
+            b = float.Parse(txtBox.Text);
             txtBox.Clear();
             txtBox.Text = (a + b).ToString();
         }
